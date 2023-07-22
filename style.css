@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    height: 130px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+#nav img{
+    height: 120px;
+    width: 150px;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.15vw;
+  }
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+  }
+
+#main{
+    /*gives a blackish effect on the video. First 3 params are for rgb and the 4th param for transparency*/
+    background-color: rgba(0, 0, 0, 0.264); 
+    position: relative;
+}
+
+#page1{
+    /* %age of parent properties, here parent is main.  */
+    height: 100vh;
+    width: 100%;
+    /* background-color: red;  */
+    position: relative;
+
+    /* first convert the content into flexbox, like rows and columns. Here, we get a row with 3 columns */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*now change the direction so that the rows form gets converted to column form. Here, we get 3 rows and 1 column*/
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+}
+
+/*to make some shadowy effect*/
+#page1 h1::before{
+    content: "GOLF. FAMILY. FOOD.";
+    color: rgb(0, 0, 0);
+
+    /*content comes over h1*/
+    position: absolute;
+    /*position the content as needed*/
+    top: -4px;
+    left: -5px;
+    /*giving the content border strokes*/
+    -webkit-text-stroke: 2px rgba(125, 183, 44, 0.832);
+    z-index: -1;
+
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+#page1 p{
+    font-weight: 25px;
+    font-weight: 400;
+    width: 40%;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+}
